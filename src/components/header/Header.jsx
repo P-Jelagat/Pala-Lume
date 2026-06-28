@@ -2,9 +2,31 @@ import "./Header.css";
 import placeholderIcon from "../../assets/icons/placeholder.png";
 import emailIcon from "../../assets/icons/email.png"; 
 import logo from "../../assets/icons/logo.png"; 
-import menuButton from "../../assets/icons/more.png"; 
+import menuButton from "../../assets/icons/more.png";
+import { useState, useRef, useEffect } from "react"; 
 
 function Header () {
+  // tracks whether menu is open
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function openMenu (){
+    setMenuOpen(!menuOpen);
+  }
+
+  // closes menu when you click anywhere outside the menu.
+  // const menuRef = useRef(null);
+
+  // useEffect(()=> {
+  //    function handleClick(event) {
+  //      if (menuRef.current && !menuRef.current.contains(event.target))
+  //      {setMenuOpen(false);}
+  //    }
+
+  //    document.addEventListener('click', handleClick);
+  //    return () => {document.removeEventListener('click', handleClick)};
+  // },[]);
+  
+
   return(
       <div className="header">
 
@@ -18,8 +40,12 @@ function Header () {
 
             <div className="logo"><img src={logo} alt="" /></div>
 
-            <div className="menu-button">
-                <a href=""><img src={menuButton} alt="" /></a>
+            <div>
+                <a href="#" 
+                 onClick={(e) => {e.preventDefault(), openMenu()}} 
+                 className="menu-button">
+                  <img src={menuButton} alt="" />
+                </a>
             </div>
 
             <div className="nav-links">
@@ -33,6 +59,19 @@ function Header () {
 
             <button>Book Appointment</button>
 
+        </div>
+
+        <div 
+        //  ref={menuRef}
+         className={`menu ${menuOpen ? "open" : ""}`}>
+            <div className="menu-nav-links">
+              <a href="">Home</a>
+              <a href="">About</a>
+              <a href="">Gallery</a>
+              <a href="">Services</a>
+              <a href="">Shop</a>
+              <a href="">Contact</a>
+            </div>
         </div>
 
       </div>
