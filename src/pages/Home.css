@@ -228,4 +228,8 @@
         font-size: 1em;
         margin-top: 20px;
     }
+    .carousel-cards article {
+        width: 200px;
+        height: 250px;
+    }
 }
