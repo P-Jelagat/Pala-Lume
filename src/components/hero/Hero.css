@@ -42,6 +42,7 @@
     padding: 15px 5px;
     width: 80%;
     max-width: 350px;
+    min-width: 200px;
     font-size: 1.2em;
     color: #eae9e9;
     border: 1px solid rgba(255,255,255, 0.4);
@@ -50,6 +51,10 @@
     border-radius: 4px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
     transition: 0.2s ease;
+}
+
+.hero-overlay-text button:active{
+    background: #040423;
 }
 
 @media(hover:hover){
@@ -76,4 +81,22 @@
         margin-top: 10px;
     }
 }
+
+@media(max-width:600px){
+    .hero-overlay-text p,
+    .hero-overlay-text h2{
+        font-size: normal;
+    }
+
+    .hero-overlay-text{
+        height: 70%;
+    }
+
+    .hero-overlay-text button{
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+}
+
 
