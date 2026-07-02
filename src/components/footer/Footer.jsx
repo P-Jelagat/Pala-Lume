@@ -44,7 +44,7 @@ function Footer (){
 
                 <div className="copyright">
                     <p>&copy; 2026 Pala Lume. All rights reserved </p>
-                    <p>Website by <a href="#" className="dev-contact">Patience Jelagat</a></p>
+                    <p>Website by <a href="https://portfolio-murex-two-75.vercel.app/" className="dev-contact">Patience Jelagat</a></p>
                  </div>
         </footer>
     );

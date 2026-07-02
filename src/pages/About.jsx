@@ -60,6 +60,14 @@ function AboutContent(){
 
         </section>
 
+        <div className="about-page-cta">
+          <h3>Ready to have the Pala Lume experience?</h3>
+           <div className="aboutPage-cta-buttons">
+             <button className="explore">Explore Services</button>
+             <button className="shop">Shop with Us</button>
+           </div>
+        </div>
+
       </div>
    );
 }

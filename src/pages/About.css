@@ -27,7 +27,7 @@
 .about-content h2{
     margin-bottom: 2em;
     text-align: center;
-    font-size: 2.2em;
+    font-size: 2.4em;
     color: #a17873;
     text-shadow: 3px 10px 3px #b5b4b4;
 }
@@ -71,5 +71,122 @@ section{
 .about-text img{
     width: 35px;
     height: 35px;
+}
+
+.about-page-cta{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+.about-page-cta h3{
+    font-size: 2.2em;
+    color:  #2B203A;
+    text-shadow: 3px 10px 3px #b5b4b4;   
+}
+
+.aboutPage-cta-buttons{ 
+    display: flex;
+    gap: 3em;
+}
+
+.aboutPage-cta-buttons button{
+    padding: 22px 20px;
+    font-size: 1.3em;
+    transition: 0.2s ease;
+    border: 1px solid #040423;
+    border-radius: 3px;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+.explore{
+    background: #040423 ;
+    color: #faf5ed;
+    font-weight: bold ;
+}
+
+.explore:active{
+    opacity: 0.4;
+}
+
+.shop{
+    background: none;
+}
+
+.shop:active{
+    background: #040423;
+    color: #faf5ed;
+
+}
+
+@media(hover:hover){
+    .explore:hover{
+        transform: translateY(-6px);
+        color: #ffffff;
+        text-shadow: 0 0 10px #eaeaea;
+    }
+
+    .shop:hover{
+        transform: scale(1.05);
+        background: rgba(255,255,255,0.5);
+    }
+}
+
+@media(max-width:950px){
+    .about-content{
+       padding: 3em;
+    }
+
+    .about-text{
+        justify-content: flex-start;
+    }
+
+
+    .about-text p{
+        font-size: 0.9em;
+    }
+
+    .image{
+        height: 63vh;
+    }
+}
+
+@media(max-width:600px){
+    .about-hero .hero-overlay-text{
+        font-size: 2em;
+    }
+
+    .image{
+        display: none;
+    }
+
+    .about-content{
+        padding: 1em;
+    }
+
+    .about-content h2{
+        font-size: 2em;
+        text-align: left;
+        margin-bottom: 1em;
+    }
+
+    .about-page-cta h3{
+        font-size: 2em;
+    }
+
+    .aboutPage-cta-buttons{
+        flex-direction: column;
+        padding-bottom: 1.2em;
+    }
+
+    .aboutPage-cta-buttons button{
+        font-size: medium;
+        gap: .5em;
+    }
+
 }
 
