@@ -42,6 +42,9 @@
     flex-grow: 1;
     padding-left: 5px;
     max-width: 500px;
+    box-shadow: 8px 10px 5px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 2px;
 }
 
 .search-button{
@@ -58,5 +61,66 @@
     display: flex;
     margin: 1em;
     align-items: center;
-    gap: .5em;
+    gap: .3em;
+}
+
+.search-label{
+    font-size: 1.5em;
+    padding-bottom: 10px;
+}
+
+.carousel-window{
+    flex: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-window::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+
+    width:50px;
+    height:100%;
+
+    background:linear-gradient(
+        to right,
+           rgba(255,255,255,0.35),
+        transparent
+    );
+
+    z-index:2;
+}
+
+.options-track{
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: scroll 70s linear infinite;
+}
+
+.options-track button{
+    background: none;
+    border: none;
+    font-size: 1em;
+    color: rgb(57, 40, 21);
+    text-shadow: 5px 5px 2px rgba(0,0,0,0.3);
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+.options-track:hover{
+    animation-play-state: paused;
 }

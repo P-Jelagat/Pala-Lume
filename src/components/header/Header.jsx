@@ -84,10 +84,10 @@ function Header () {
             <div className="nav-links">
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
-                <Link to="/about">Gallery</Link>
-                <Link to="/about">Services</Link>
-                <Link to="/about">Shop</Link>
-                <Link to="/about">Contact</Link>
+                <Link to="/gallery">Gallery</Link>
+                <Link to="/services">Services</Link>
+                <Link to="/shop">Shop</Link>
+                <Link to="/contact">Contact</Link>
             </div>
 
             <button>Book Appointment</button>

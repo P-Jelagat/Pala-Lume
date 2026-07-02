@@ -5,6 +5,15 @@ import searchIcon from "../assets/icons/magnifying-glass.png"
 import productImage from "../assets/images/minitwist 1.png"
 
 function GalleryContent(){
+
+    const styles = [
+        "Twists",
+        "Braids",
+        "Locks",
+        "Blowout",
+        "Curl Definition"      
+    ];
+
     return(
         <div className="gallery-content">
             <div className="search">
@@ -23,22 +32,25 @@ function GalleryContent(){
 
                 <div className="carousel-window">
                     <div className="options-track">
-                        <button>Twists</button>
-                        <button>Braids</button>
-                        <button>Locks</button>
-                        <button>Blowout</button>
-                        <button>Curl Definition</button>
 
-                        <button>Twists</button>
-                        <button>Braids</button>
-                        <button>Locks</button>
-                        <button>Blowout</button>
-                        <button>Curl Definition</button>
+                        {[...styles, ...styles, ...styles].map((style, index) => (
+                            <button
+                                key={index}
+                                onClick={() => console.log(style)}
+                            >
+                                {style}
+                            </button>
+                        ))}
 
                     </div>
                 </div>
 
             </div>
+
+            <div className="catalogue">
+
+            </div>
+
         </div>
     );
 }
