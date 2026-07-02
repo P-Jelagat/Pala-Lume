@@ -10,6 +10,8 @@ const images = import.meta.glob("../assets/images/*.png", {
     import: "default"
 });
 
+
+
 function GalleryContent(){
 
     const [selectedCategory, setSelectedCategory] = useState("All");
@@ -91,7 +93,8 @@ function GalleryContent(){
 
     const filteredImages = 
      selectedCategory === "All" ? hairstyles : hairstyles.filter(
-        style => style.category === selectedCategory
+        style => style.category.toLocaleLowerCase().includes(selectedCategory.toLowerCase())
+
      );
 
     const styles = [
@@ -101,6 +104,22 @@ function GalleryContent(){
         "Blowout",
         "Curl Definition"      
     ];
+
+    function handleSearch(){
+        const value = search.trim();
+
+        if (value === "") {
+            setSelectedCategory("All");
+        }else{
+            setSelectedCategory(value);
+        }
+    }
+
+
+    function resetDisplay(){
+        setSearch("");
+        setSelectedCategory("All")
+    }
 
 
     return(
@@ -114,10 +133,16 @@ function GalleryContent(){
                     <input 
                         type="text" 
                         value={search} onChange={ (e)=>setSearch(e.target.value)}
+                        onKeyDown={(e) => {
+                            if(e.key === "Enter"){
+                                handleSearch();
+                            }
+                        }}
                         placeholder="'twists, braids, locks...'"
                       
                     />
-                    <button className="search-button"><img src={searchIcon} alt="" /></button>
+                    <button className="reset-button" onClick={resetDisplay}>X </button>
+                    <button className="search-button" onClick={handleSearch}><img src={searchIcon} alt="" /></button>
                 </div>
             </div>
 

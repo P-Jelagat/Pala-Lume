@@ -36,6 +36,7 @@
     width: 80%;
     justify-content: center;
     margin-top: 1em;
+    position: relative;
 }
 
 .input input{
@@ -50,11 +51,34 @@
 .search-button{
     background: none;
     border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.search-button:active{
+    opacity: 0.4;
 }
 
 .search-button img{
     height: 35px;
     width: 35px;
+}
+
+.reset-button{
+    background: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    width: 25px;
+    height: 25px;
+    align-self: center;
+    border-radius: 2px;
+    position: absolute;
+    right: 4.2em;
+    transition: 0.2s ease;
+}
+
+.reset-button:active{
+    opacity: 0.4;
 }
 
 .search-options{
@@ -124,6 +148,15 @@
 @media(hover:hover){
     .options-track:hover{
         animation-play-state: paused;
+    }
+
+    .reset-button:hover{
+        background: rgba(222, 222, 222, 0.35);
+    }
+
+    .search-button:hover{
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 1000px;
     }
 }
 
