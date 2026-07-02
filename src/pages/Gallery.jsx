@@ -130,18 +130,22 @@ function GalleryContent(){
                 </div>
 
                 <div className="input">
-                    <input 
-                        type="text" 
-                        value={search} onChange={ (e)=>setSearch(e.target.value)}
-                        onKeyDown={(e) => {
-                            if(e.key === "Enter"){
-                                handleSearch();
-                            }
-                        }}
-                        placeholder="'twists, braids, locks...'"
-                      
-                    />
-                    <button className="reset-button" onClick={resetDisplay}>X </button>
+                        <div className="input-wrapper">
+                            <input 
+                                type="text" 
+                                value={search} onChange={ (e)=>setSearch(e.target.value)}
+                                onKeyDown={(e) => {
+                                    if(e.key === "Enter"){
+                                        handleSearch();
+                                    }
+                                }}
+                                placeholder="'twists, braids, locks...'"
+                            
+                            />
+
+                            <button className="reset-button" onClick={resetDisplay}>X </button>
+                        </div>
+
                     <button className="search-button" onClick={handleSearch}><img src={searchIcon} alt="" /></button>
                 </div>
             </div>

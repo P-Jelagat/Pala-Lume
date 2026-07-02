@@ -2,6 +2,9 @@ import Hero from "../components/hero/Hero";
 import "./Home.css"
 import homeAboutImage from "../assets/images/adrian-fernandez-t1jlLrsMpjc-unsplash.jpg"
 import homeHeroImage from "../assets/images/jessica-felicio-_cvwXhGqG-o-unsplash (1).jpg"
+import cardImage1 from "../assets/images/leighann-blackwood-EUedgXxvTAs-unsplash.jpg"
+import cardImage2 from "../assets/images/ayo-ogunseinde-fjTP7Ybcal0-unsplash.jpg"
+import cardImage3 from "../assets/images/guilherme-petri-PtOfbGkU3uI-unsplash.jpg"
 
 function HomeAbout(){
     return(
@@ -44,7 +47,7 @@ function Carousel (){
             <div className="carousel-cards">
 
                 <article>
-                    <img src={homeAboutImage}  alt="" />
+                    <img src={cardImage1}  alt="" />
                 </article>
 
                 <article>
@@ -55,7 +58,7 @@ function Carousel (){
                 </article>
                             
                 <article>
-                    <img src={homeAboutImage} alt="" />
+                    <img src={cardImage2} alt="" />
                 </article>
 
                 <article>
@@ -66,7 +69,7 @@ function Carousel (){
                 </article>
 
                 <article>
-                    <img src={homeAboutImage}  alt="" />
+                    <img src={cardImage3}  alt="" />
                 </article>
 
                 <article>
@@ -77,7 +80,7 @@ function Carousel (){
                 </article>
                             
                 <article>
-                    <img src={homeAboutImage} alt="" />
+                    <img src={cardImage1} alt="" />
                 </article>
 
                 <article>
@@ -88,7 +91,7 @@ function Carousel (){
                 </article>
 
                 <article>
-                    <img src={homeAboutImage}  alt="" />
+                    <img src={cardImage2}  alt="" />
                 </article>
 
                 <article>

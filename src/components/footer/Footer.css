@@ -78,4 +78,10 @@ footer{
         flex-direction: column;
         gap: 2em;
     }
+
+    .footer-content p,
+    .footer-content a,
+    .footer-content h4{
+        font-size: medium;
+    }
 }

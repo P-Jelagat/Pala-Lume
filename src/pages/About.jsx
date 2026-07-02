@@ -1,8 +1,8 @@
 import "./About.css";
 import Hero from "../components/hero/Hero";
 import aboutHeroImage from "../assets/images/leighann-blackwood-EUedgXxvTAs-unsplash.jpg"
-import firstImage from "../assets/images/land-o-lakes-inc-UnSFmJCCrW0-unsplash.jpg"
-import secondImage from "../assets/images/land-o-lakes-inc-UnSFmJCCrW0-unsplash.jpg"
+import firstImage from "../assets/images/guilherme-petri-PtOfbGkU3uI-unsplash.jpg"
+import secondImage from "../assets/images/secondImageAbout.png"
 import thirdImage from "../assets/images/land-o-lakes-inc-UnSFmJCCrW0-unsplash.jpg"
 import idea from "../assets/icons/idea.png"
 import observation from "../assets/icons/diagnosis.png"
