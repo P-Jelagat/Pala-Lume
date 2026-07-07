@@ -57,16 +57,20 @@ function ContactContents(){
         return(
             <div className="contact-contents">
                 <div className="outreach-info">
-                    {cardDetails.map( detail =>
-                       <ContactCard 
-                         name={detail.name}
-                         image={detail.image}
-                         title={detail.title}
-                         contactInfo={detail.contactInfo}
-                         link={detail.link}
-                       />
-                     )
-                    }
+
+                    <div className="contact-grid">
+                        {cardDetails.map( detail =>
+                            <ContactCard 
+                                name={detail.name}
+                                image={detail.image}
+                                title={detail.title}
+                                contactInfo={detail.contactInfo}
+                                link={detail.link}
+                            />
+                          )
+                        }
+                    </div>
+
                 </div>
 
                 <div className="contact-form">
@@ -82,10 +86,10 @@ function ContactContents(){
                         <label htmlFor="name">Name</label>
                         <input type="text" placeholder="'e.g Patience Jelagat'" required/>
 
-                        <label htmlFor="email">Name</label>
+                        <label htmlFor="email">Email</label>
                         <input type="email" placeholder="'e.g patienceJelagatt@gmail.com'" required/>
 
-                        <label htmlFor="Subject">Name</label>
+                        <label htmlFor="Subject">Subject</label>
                         <input type="text" placeholder="'e.g Consultation inquiry'" />
 
                         <label htmlFor="name">Message</label>
